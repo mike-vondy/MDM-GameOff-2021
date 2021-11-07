@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Entities/Characters/character_body.png" type="Texture" id=1]
+[ext_resource path="res://src/Entities/Characters/character.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28.0752, 70.993 )
+
+[node name="Character" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2( 0.594604, -23.8597 )
+shape = SubResource( 1 )
+
+[node name="BodyPivot" type="Position2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="BodyPivot"]
+position = Vector2( 0, -23.7841 )
+texture = ExtResource( 1 )
